@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="350dp"
+        android:layout_height="210dp"
+        app:cardBackgroundColor="@color/light_blue_50"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        app:cardElevation="12dp">
+
+        <RelativeLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/forecastIconId"
+                android:src="@android:drawable/ic_btn_speak_now"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
+
+            <TextView
+                android:id="@+id/forecastDateText"
+                android:layout_below="@id/forecastDescriptionTextView"
+                android:layout_centerHorizontal="true"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Monday, Nov. 2017"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/forecastHighText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_alignBaseline="@+id/forecastLowText"
+                android:layout_alignBottom="@+id/forecastLowText"
+                android:layout_alignStart="@+id/forecastDescriptionTextView"
+                android:drawableLeft="@android:drawable/arrow_up_float"
+                android:text="High:"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/forecastLowText"
+                android:layout_below="@id/forecastDateText"
+                android:layout_toRightOf="@id/forecastIconId"
+                android:textSize="25sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@android:drawable/arrow_down_float"
+                android:text="Low:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/forecastDescriptionTextView"
+                android:layout_centerHorizontal="true"
+                android:text="Mostly Cloudy"
+                android:textSize="15dp"
+                android:textStyle="italic"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
